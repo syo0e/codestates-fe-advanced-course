@@ -1,6 +1,7 @@
 import './App.css';
 import React , {useState, useEffect} from "react";
 import axios from "axios";
+import Posts from "./Posts";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -24,6 +25,7 @@ function App() {
  
   return (
     <div className="App">
+      <Posts posts={posts} loading={loading}></Posts>
     </div>
   );
 }
